@@ -1,0 +1,69 @@
+.button {
+  //VARIAVEIS
+  $font-500: 500;
+  $font-16px: 1rem;
+  $font-roboto: 'Roboto', sans-serif;
+
+  $color-purple: #835afd;
+  $color-white: #f8f8f8;
+
+  position: relative;
+  width: 100%;
+
+  background-color: $color-purple;
+  
+  font: $font-500 $font-16px $font-roboto;
+  color: $color-white;
+
+  padding: 0.9375rem;
+
+  border: none;
+  border-radius: 0.5rem;
+
+  transition: filter 0.2s;
+
+  cursor: pointer;
+
+  &:not(:disabled):hover {
+    filter: brightness(0.9);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+}
+
+.outlined {
+  //VARIAVEIS
+  $font-500: 500;
+  $font-16px: 1rem;
+  $font-roboto: 'Roboto', sans-serif;
+
+  $color-purple: #835afd;
+  $color-white: #f8f8f8;
+
+  position: relative;
+  width: 100%;
+
+  font: $font-500 $font-16px $font-roboto;
+  color: $color-purple;
+
+  padding: 0.9375rem;
+
+  border: 1px solid $color-purple;
+  border-radius: 0.5rem;
+
+  transition: 0.3s;
+
+  background-color: transparent; 
+
+  cursor: pointer;
+
+  &:hover {
+    background-color: $color-purple;
+
+    color: $color-white; 
+  }
+  
+}

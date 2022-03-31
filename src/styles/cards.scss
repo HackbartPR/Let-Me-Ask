@@ -1,0 +1,153 @@
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.divCards__container {
+    //VARIÁVEIS
+    $color_background: #FEFEFE;
+    $color_black: #29292E;
+    $color_gray_dark: #737380;
+    $color-purple: #835afd;
+    $color_purple_white: #F4F0FF;
+    $color_gray_white: #DBDCDD;
+
+    $font-400: 400;
+    $font-500: 500;
+
+    $font-roboto: 'Roboto', sans-serif;
+    $font-poppins: 'Poppins', sans-serif;
+
+    $font-18px: 1.125rem;
+    $font-16px: 1rem;
+    $font-14px: 0.875rem;
+
+    //CONTAINER CONFIGURAÇÕES
+    position: relative;
+    width: 100%;
+
+    justify-content: stretch;
+    align-items: flex-start;
+    gap: 2rem;
+
+    background-color: $color_background;
+
+    box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.04);
+    border-radius: 0.5rem;
+
+    padding: 1.5rem;
+
+    & + .divCards__container {
+        margin-top: 0.5rem;
+    }
+
+    //CONFIGURAÇÕES PARA ADMIN ROOM
+    &.isHighlighted {
+        border: 1px solid $color-purple;
+        background-color: $color_purple_white;
+
+        .divCards__userName {
+            color: $color_black;
+        }
+
+        .icon-edit {
+            color: $color-purple !important;
+        }
+               
+    }
+
+    &.isAnswered {
+        border: none;
+        background-color: $color_gray_white;
+    }  
+
+    .divCards__text{
+        font: $font-400 $font-16px $font-roboto;
+        color: $color_black;
+
+        position: relative;
+        width: 100%;
+
+        display: flex;
+        justify-content: flex-start !important;
+        align-items: flex-start;
+    }
+
+    .divCards__footer {
+        flex-direction: row;
+        justify-content: space-between;
+
+        position: relative;
+        width: 100%;
+
+        .divCards__footer__user {
+            flex-direction: row;
+            gap: 0.5rem;
+
+            font: $font-400 $font-14px $font-roboto;
+            color: $color_gray_dark;
+
+            .divCards__img {
+                width: 2rem;
+                clip-path: circle();
+            }
+
+        }
+
+        .divCards__footer__functions {
+            flex-direction: row;
+            gap: 1.3rem;
+            
+            align-items: flex-end;
+
+            .icons {                
+                font-size: 1.5rem;
+                color: $color_gray_dark;
+
+                transition: 0.2s;
+                
+                cursor: pointer;
+
+                &:hover {
+                    color: $color-purple;
+                }
+            }          
+
+            //CONFIGURAÇÕES PARA O USER ROOM
+            .divCards__quantLikes {
+
+                position: relative;
+                width: 100%;
+                height: 100%;
+
+                margin-block-end: 0;
+                margin-block-start: 0;
+
+                display: flex;
+                align-items: flex-end;                          
+
+                font: $font-400 $font-18px $font-roboto;
+                color: $color_gray_dark; 
+            }
+
+            .divCards__footer__btnLike {
+                background-color: transparent;
+                border: none;
+            }
+
+            .isLiked{
+                color: $color-purple;
+            }
+                
+
+        }
+    }
+
+}

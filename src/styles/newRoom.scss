@@ -1,0 +1,119 @@
+//CLASSES GLOBAIS
+.flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.newRoom {
+  //VARIAVEIS
+  $color-purple: #835afd;
+  $color-white: #f8f8f8;
+  $color-black: #29292E;
+  $color_gray: #A8A8B3;
+  $color_pink: #E559F9;
+
+  $font-400: 400;
+  $font-500: 500;
+  $font-700: 700;
+
+  $font-poppins: 'Poppins', sans-serif;
+  $font-roboto: 'Roboto', sans-serif;
+
+  $font-14px: 0.875rem;
+  $font-16px: 1rem;
+  $font-24px: 1.5rem;
+  $font-36px: 2.25rem;
+
+  //CONFIGURAÇÕES DE HOME
+  flex-direction: row;
+
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+
+  background-color: $color-white;
+
+  .sidebar {
+    //CONFIGURAÇÕES DO SIDEBAR
+    padding: 7.625rem 5.25rem;
+
+    flex: 5;
+    align-items: baseline;
+
+    background-color: $color-purple;
+
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    color: $color-white;
+
+    .sidebar__title {
+      font: $font-700 $font-36px $font-poppins;
+
+      margin: 0.5rem 0 1rem 0;
+    }
+
+    .sidebar_text {
+      font: $font-400 $font-24px $font-roboto;
+
+      opacity: 0.7;
+    }
+  }
+
+  .newRoom {
+    //CONFIGURAÇÕES DO LOGIN
+    flex: 8;
+
+    .newRoom__container {
+      //CONFIGURAÇÕES DO LOGIN__CONTAINER
+      align-items: stretch;
+
+      width: 20rem;
+
+      text-align: center;
+
+      .newRoom__img {
+        align-self: center; 
+      }
+
+      .newRoom__title {
+        font: $font-700 $font-24px $font-poppins;
+        color: $color-black;
+
+        margin: 3.5rem 0 1.5rem 0;
+      }
+
+      .newRoom__form {
+        //CONFIGURAÇÕES DO LOGIN__FORM
+        align-items: stretch;
+
+        .newRoom__input {
+          padding: 1rem;
+          margin-bottom: 1rem;
+
+          font: $font-400 $font-16px $font-roboto;
+          color: $color_gray;
+
+          border: 1px solid $color_gray;
+          border-radius: 0.5rem;
+        }
+      }
+
+      .newRoom__text {
+        font: $font-400 $font-14px $font-roboto;
+        color: $color_gray;
+
+        margin-top: 1rem;
+
+        .newRoom__link {
+          color: $color_pink;
+        }
+      }
+
+
+    }
+  }
+}
